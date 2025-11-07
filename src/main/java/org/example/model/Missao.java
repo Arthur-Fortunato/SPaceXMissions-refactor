@@ -15,5 +15,5 @@ public class Missao {
     private boolean teveFalhaCritica;
     private boolean veterano;
     private String destino;
-    private boolean Secreta;
+    private boolean secreta;
 }
