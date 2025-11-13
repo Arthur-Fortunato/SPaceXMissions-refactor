@@ -10,7 +10,11 @@ public class ConversorDeMoedaService {
     private final double IMPOSTO = 0.3;
     public double converterParaReais(String moeda, double valor){
         double cotacao = cambioClient.buscarCotacao(moeda);
-        return ((valor * cotacao) * IMPOSTO);
+        return aplicarImposto((valor * cotacao));
+    }
+
+    private double aplicarImposto(double valor){
+        return valor * IMPOSTO;
     }
 
 }
